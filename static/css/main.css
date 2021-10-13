@@ -20,7 +20,7 @@ footer {
 }
 
 .navbar {
-    background-color: rgb(71, 194, 243) !important;
+    background-color: rgb(9, 116, 158) !important;
 }
 
 .card {
@@ -37,12 +37,12 @@ footer {
 
 a {
     text-decoration: none !important;
-    color: black;
+    color: rgb(49, 184, 177);
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: rgb(39, 160, 154);
 }
 
 
