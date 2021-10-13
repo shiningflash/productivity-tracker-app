@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags%} {% block content %}
+
+<section class="text-center">
+  <div class="container bg-light">
+    <div class="row m-5 p-5">
+      <div class="col-lg-6 col-6">
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>{{total}}</h3>
+
+            <p>Total Number of Days</p>
+          </div>
+
+          <i class="fa fa-chart-bar text-light fa-3x" aria-hidden="true"></i>
+
+          <a href="#" class="small-box-footer"
+            >Total Number of days <i class="fas fa-arrow-circle-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-6">
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3>{{ maxi }}</h3>
+
+            <p>Highest Score</p>
+          </div>
+          <i class="fas fa-chart-line fa-3x"></i>
+
+          <a href="#" class="small-box-footer"
+            >Highest Score <i class="fas fa-arrow-circle-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="row ml-5 mr-5 pl-5 pr-5">
+      <div class="col-lg-4 col-6">
+        <div
+          class="small-box bg-warning"
+          style="color: rgb(80, 80, 80) !important"
+        >
+          <div class="inner">
+            <h3>{{avg}}</h3>
+
+            <p>Average Score</p>
+          </div>
+
+          <i
+            class="fa fa-chart-bar text-light fa-3x"
+            style="color: rgb(80, 80, 80) !important"
+            aria-hidden="true"
+          ></i>
+
+          <a
+            href="#"
+            class="small-box-footer"
+            style="color: rgb(80, 80, 80) !important"
+            >Average Score <i class="fas fa-arrow-circle-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-6">
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3>{{ highest_streak }}</h3>
+
+            <p>Highest Streak</p>
+          </div>
+          <i class="fas fa-chart-line fa-3x"></i>
+
+          <a href="#" class="small-box-footer"
+            >Highest Streak <i class="fas fa-arrow-circle-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div
+          class="small-box bg-light"
+          style="color: rgb(80, 80, 80) !important"
+        >
+          <div class="inner">
+            <h3>{{ current_streak }}</h3>
+
+            <p>Current Streak</p>
+          </div>
+          <i
+            class="fas fa-chart-line fa-3x"
+            style="color: rgb(80, 80, 80) !important"
+          ></i>
+
+          <a
+            href="#"
+            class="small-box-footer"
+            style="color: rgb(80, 80, 80) !important"
+            >Current Streak <i class="fas fa-arrow-circle-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    {% if scatter %}
+    <div style="width: 600; height: 500">{{ scatter|safe }}</div>
+    {% endif %} {% if bar %}
+    <div style="width: 600; height: 500">{{ bar|safe }}</div>
+    {% endif %} {% if streak_graph %}
+    <div style="width: 600; height: 500">{{ streak_graph|safe }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock content %}
